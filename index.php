@@ -5,7 +5,7 @@ $categorias[] = "infantil";
 $categorias[] = "adolescente";
 $categorias[] = "adulto";
 // $categorias[] = "idoso";
-
+ 
 // print_r($categorias);
 // var_dump($categorias);
 
