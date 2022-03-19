@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php 
+include "servicos/sessao.php";
+include "servicos/validacao.php";
+include "servicos/categoria.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,7 +16,7 @@
 
     <form action="script.php" method="post">
         <?php 
-            $mensagem = isset($_SESSION["msg"]) ? $_SESSION["msg"] : ""; 
+            $mensagem = getMensagem();
             if(!empty($mensagem))
                 echo $mensagem . "<br/>";
         ?>
