@@ -26,6 +26,25 @@ $idade = $_POST['idade'];
     }
 } */
 
+if(empty($nome)) {
+    echo "O nome não pode ser vazio";
+    return 0;
+}
+
+$NomeLen = strlen($nome);
+if($NomeLen < 3) {
+    echo "O Nome deve conter mais de 3 caracteres";
+    return 0;
+}
+if($NomeLen > 30) {
+    echo "O nome não pode ser extenso";
+    return 0;
+}
+if(!is_numeric($idade)) {
+    echo "Valor da Idade Invalida!";
+    return 0;
+}
+
 if($idade >= 6 && $idade <= 12) {
     // echo "Infantil";
     for($i = 0; $i < count($categorias); $i++) {
